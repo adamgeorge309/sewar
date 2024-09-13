@@ -8,7 +8,7 @@
       pkgs = import nixpkgs { system = "x86_64-linux"; };
     in
     {
-      packages.default = pkgs.python3Packages.buildPythonPackage rec {
+      packages.x86_64-linux.default = pkgs.python3Packages.buildPythonPackage rec {
         pname = "sewar";
         version = "0.4.6";
 
@@ -33,6 +33,8 @@
           description = "Python package for image quality metrics";
           license = licenses.mit;
         };
+
+        # packages.default = sewarPkgs.defaultPackage.x86_64-linux;
       };
     };
 }
