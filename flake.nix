@@ -8,7 +8,7 @@
       pkgs = import nixpkgs { system = "x86_64-linux"; };
     in
     {
-      packages.x86_64-linux.default = pkgs.python3Packages.buildPythonPackage rec {
+      defaultPackage.x86_64-linux = pkgs.python3Packages.buildPythonPackage rec {
         pname = "sewar";
         version = "0.4.6";
 
